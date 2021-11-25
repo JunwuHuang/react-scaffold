@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom"
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
         <Link to="/about">About</Link>
       </nav>
     </>
-  );
+  )
 }
 
 function About() {
@@ -25,7 +25,7 @@ function About() {
         <Link to="/">Home</Link>
       </nav>
     </>
-  );
+  )
 }
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
         <Route path="about" element={<About />} />
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

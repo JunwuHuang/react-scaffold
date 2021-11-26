@@ -1,7 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom"
 
-function Home() {
-  return (
+const Home = () => (
     <>
       <main>
         <h2>Welcome to the homepage!</h2>
@@ -12,14 +11,14 @@ function Home() {
       </nav>
     </>
   )
-}
 
-function About() {
+const About = () => {
+  const words = "That feels like an existential question, don't you think?"
   return (
     <>
       <main>
         <h2>Who are we?</h2>
-        <p>That feels like an existential question, don't you think?</p>
+        <p>{words}</p>
       </main>
       <nav>
         <Link to="/">Home</Link>
@@ -28,8 +27,7 @@ function About() {
   )
 }
 
-function App() {
-  return (
+const App = () => (
     <div className="App">
       <h1>Welcome to React Router!</h1>
       <Routes>
@@ -38,6 +36,5 @@ function App() {
       </Routes>
     </div>
   )
-}
 
 export default App

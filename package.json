@@ -25,6 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier": "prettier --ignore-unknown --write .",
+    "stylelint": "stylelint --fix **/*.{css,less}",
     "eslint": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install && chmod ug+x .husky/*"
   },
@@ -58,6 +59,11 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "stylelint": "^14.1.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-order": "^5.0.0"
   }
 }

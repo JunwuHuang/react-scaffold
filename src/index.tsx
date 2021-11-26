@@ -1,15 +1,19 @@
 import { StrictMode } from "react"
 import ReactDOM from "react-dom"
-import "./index.css"
 import { BrowserRouter } from "react-router-dom"
+import { ConfigProvider } from "antd"
+import "antd/dist/antd.variable.min.css"
+import "./index.less"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 
 ReactDOM.render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ConfigProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ConfigProvider>
   </StrictMode>,
   document.getElementById("root")
 )

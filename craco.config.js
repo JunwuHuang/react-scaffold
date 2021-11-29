@@ -1,4 +1,5 @@
 const CracoAntDesignPlugin = require("craco-antd")
+const CracoAlias = require("craco-alias")
 
 module.exports = {
   plugins: [
@@ -9,6 +10,14 @@ module.exports = {
           libraryDirectory: "es",
           style: "css",
         },
+      },
+    },
+    {
+      plugin: CracoAlias,
+      options: {
+        source: "tsconfig",
+        baseUrl: "./",
+        tsConfigPath: "./tsconfig.paths.json",
       },
     },
   ],

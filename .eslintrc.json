@@ -21,6 +21,20 @@
         "extensions": [".tsx"]
       }
     ],
-    "import/extensions": ["error", "never"]
+    "import/extensions": ["error", "never"],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["@", "./src/"]],
+        "extensions": [".ts", ".tsx"]
+      }
+    }
   }
 }

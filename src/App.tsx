@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom"
 import { Button } from "antd"
+import { AppLayout } from "@/layouts"
 
 const Home = () => (
   <>
@@ -33,13 +34,15 @@ const About = () => {
 }
 
 const App = () => (
-  <div className="App">
-    <h1>Welcome to React Router!</h1>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="about" element={<About />} />
-    </Routes>
-  </div>
+  <AppLayout>
+    <div className="App">
+      <h1>Welcome to React Router!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+      </Routes>
+    </div>
+  </AppLayout>
 )
 
 export default App

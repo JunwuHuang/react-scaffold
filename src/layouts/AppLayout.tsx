@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Layout } from "antd"
+import { Layout, BackTop } from "antd"
 import AppHeader from "./AppHeader"
 import AppSider from "./AppSider"
 import AppFooter from "./AppFooter"
@@ -17,6 +17,7 @@ const AppLayout: FC = ({ children }) => (
         <AppPageHeader />
         <Content className={styles.content}>{children}</Content>
         <AppFooter />
+        <BackTop />
       </Content>
     </Layout>
   </Layout>

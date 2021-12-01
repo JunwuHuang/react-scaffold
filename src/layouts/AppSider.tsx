@@ -2,6 +2,9 @@ import { ReactElement, useState, useEffect } from "react"
 import { useLocation, Link } from "react-router-dom"
 import { Layout, Menu } from "antd"
 import { IRouteObject, routes } from "@/routes"
+import styles from "./index.module.less"
+
+const SIDER_THEME = "light"
 
 const AppSider = () => {
   const { pathname } = useLocation()
@@ -44,9 +47,10 @@ const AppSider = () => {
     }, [])
 
   return (
-    <Layout.Sider>
+    <Layout.Sider theme={SIDER_THEME}>
       <Menu
-        theme="dark"
+        className={styles.menu}
+        theme={SIDER_THEME}
         mode="inline"
         openKeys={openKeys}
         selectedKeys={[pathname]}

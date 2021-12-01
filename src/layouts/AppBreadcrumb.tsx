@@ -11,7 +11,7 @@ const generateBreadCrumbsMap = (
   prefix = ""
 ): Record<string, string> =>
   _routes.reduce((map: Record<string, string>, route) => {
-    const currentPath = `${prefix}/${route.path}`
+    const currentPath = `${prefix}/${route.path ?? ""}`
     return {
       ...map,
       [currentPath]: String(route.meta?.title ?? ""),
@@ -34,7 +34,15 @@ const AppBreadcrumb: FC<AppBreadcrumbProps> = () => {
     )
   })
 
-  return <Breadcrumb>{extraBreadcrumbItems}</Breadcrumb>
+  return (
+    <Breadcrumb>
+      {[
+        <Item key="/">
+          <Link to="/">{breadcrumbNameMap["/"]}</Link>
+        </Item>,
+      ].concat(extraBreadcrumbItems)}
+    </Breadcrumb>
+  )
 }
 
 export default AppBreadcrumb

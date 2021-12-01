@@ -1,17 +1,20 @@
 import ReactDOM from "react-dom"
 import { BrowserRouter } from "react-router-dom"
+import { RecoilRoot } from "recoil"
 import { ConfigProvider } from "antd"
 import "antd/dist/antd.variable.min.css"
-import "./index.less"
+import "@/styles/index.less"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 
 ReactDOM.render(
-  <ConfigProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </ConfigProvider>,
+  <RecoilRoot>
+    <ConfigProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ConfigProvider>
+  </RecoilRoot>,
   document.getElementById("root")
 )
 

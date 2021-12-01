@@ -1,4 +1,3 @@
-import { StrictMode } from "react"
 import ReactDOM from "react-dom"
 import { BrowserRouter } from "react-router-dom"
 import { ConfigProvider } from "antd"
@@ -8,13 +7,11 @@ import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 
 ReactDOM.render(
-  <StrictMode>
-    <ConfigProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ConfigProvider>
-  </StrictMode>,
+  <ConfigProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </ConfigProvider>,
   document.getElementById("root")
 )
 

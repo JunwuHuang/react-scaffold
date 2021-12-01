@@ -1,8 +1,9 @@
 import { FC } from "react"
-import { Layout, PageHeader } from "antd"
+import { Layout } from "antd"
 import AppHeader from "./AppHeader"
 import AppSider from "./AppSider"
 import AppFooter from "./AppFooter"
+import AppPageHeader from "./AppPageHeader"
 import styles from "./index.module.less"
 
 const { Content } = Layout
@@ -13,18 +14,7 @@ const AppLayout: FC = ({ children }) => (
     <Layout>
       <AppSider />
       <Content>
-        <PageHeader
-          ghost={false}
-          title="首页"
-          breadcrumb={{
-            routes: [
-              {
-                path: "/",
-                breadcrumbName: "首页",
-              },
-            ],
-          }}
-        />
+        <AppPageHeader />
         <Content className={styles.content}>{children}</Content>
         <AppFooter />
       </Content>
